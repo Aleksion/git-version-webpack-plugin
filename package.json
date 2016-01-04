@@ -1,5 +1,5 @@
 {
-  "name": "shelljs-webpack-plugin",
+  "name": "git-version-webpack-plugin",
   "version": "1.0.0",
   "description": "Plugin for running shell scripts with webpack",
   "main": "index.js",
@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "lodash": "^3.10.1",
     "shelljs": "^0.5.3"
   }
 }
