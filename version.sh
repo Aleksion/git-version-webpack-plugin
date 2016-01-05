@@ -24,7 +24,7 @@ BUILD_TIMESTAMP="$(date +"%Y-%m-%d-%r-%Z")"
 BUILD_TIMESTAMP="${BUILD_TIMESTAMP/ /-}"
 GIT_BRANCH="$(git symbolic-ref --short -q HEAD || echo 'HEAD')"
 GIT_TAG="$(git describe --always)"
-GIT_USER="$(git show --format='%aN' HEAD)"
+GIT_USER="$(git show --quiet --format='%an' HEAD)"
 
 
 BUILD_VERSION="[${BUILD_TIMESTAMP}]-[${GIT_BRANCH}]-[${GIT_TAG}]-[${GIT_USER}]"
