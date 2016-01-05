@@ -1,6 +1,6 @@
 {
   "name": "git-version-webpack-plugin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Plugin for running shell scripts with webpack",
   "main": "index.js",
   "scripts": {
