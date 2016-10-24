@@ -6,28 +6,28 @@ function Plugin(options) {
   var self = this;
 }
 
-Plugin.prototype.apply = function (compiler) {
+Plugin.prototype.apply = function(compiler) {
   var self = this;
 
-  compiler.plugin("this-compilation", function(compilation){
+  compiler.plugin("this-compilation", function(compilation) {
 
-      shell.exec('chmod +x ' +__dirname + "/version.sh");
+    shell.exec('chmod +x ' + __dirname + "/version.sh");
 
-      var result = shell.exec(__dirname + "/version.sh")
-        .output
-        .replace(/\s/g, '');
+    var result = shell.exec(__dirname + "/version.sh")
+      .output
+      .replace(/\s/g, '');
 
-      this.options.buildVersion = result;
+    this.options.buildVersion = result;
   })
 };
 
 Plugin.prototype.getBuildVersion = function() {
-  shell.exec('chmod +x ' +__dirname + "/version.sh");
+  shell.exec('chmod +x ' + __dirname + "/version.sh");
 
   var result = shell.exec(__dirname + "/version.sh")
     .output
-    .replace(/\s/g
-
+    .replace(/\s/g, '');
+    
   return result;
 }
 
