@@ -18,8 +18,17 @@ Plugin.prototype.apply = function (compiler) {
         .replace(/\s/g, '');
 
       this.options.buildVersion = result;
-      this.buildVersion = result;
   })
 };
+
+Plugin.prototype.getBuildVersion = function() {
+  shell.exec('chmod +x ' +__dirname + "/version.sh");
+
+  var result = shell.exec(__dirname + "/version.sh")
+    .output
+    .replace(/\s/g
+
+  return result;
+}
 
 module.exports = Plugin;
