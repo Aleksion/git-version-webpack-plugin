@@ -18,6 +18,7 @@ Plugin.prototype.apply = function (compiler) {
         .replace(/\s/g, '');
 
       this.options.buildVersion = result;
+      this.buildVersion = result;
   })
 };
 
